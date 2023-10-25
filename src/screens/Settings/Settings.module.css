@@ -1,0 +1,142 @@
+.settings {
+  display: flex;
+  align-items: flex-start;
+  padding: 24px;
+  border-radius: 8px;
+  background: #FCFCFC;
+}
+@media only screen and (max-width: 1023px) {
+  .settings {
+    display: block;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .settings {
+    padding: 24px 16px;
+  }
+}
+:global(.dark-mode) .settings {
+  background: #1A1D1F;
+}
+
+.menu {
+  position: sticky;
+  top: 116px;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  width: 280px;
+}
+@media only screen and (max-width: 1259px) {
+  .menu {
+    width: 210px;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .menu {
+    display: none;
+  }
+}
+.menu .button {
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-align: left;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.6;
+  color: #6F767E;
+  transition: all 0.2s;
+}
+.menu .button:not(:last-child) {
+  margin-bottom: 8px;
+}
+.menu .button:hover, .menu .button.active {
+  color: #1A1D1F;
+}
+:global(.dark-mode) .menu .button:hover, :global(.dark-mode) .menu .button.active {
+  color: #FCFCFC;
+}
+
+.menu .button.active {
+  background: #EFEFEF;
+}
+:global(.dark-mode) .menu .button.active {
+  background: #272B30;
+}
+
+.wrapper {
+  flex-grow: 1;
+  padding-left: 32px;
+}
+@media only screen and (max-width: 1023px) {
+  .wrapper {
+    padding-left: 0;
+  }
+}
+.wrapper > .button {
+  margin-top: 48px;
+}
+@media only screen and (max-width: 1023px) {
+  .wrapper > .button {
+    margin-top: 32px;
+  }
+}
+
+.dropdown {
+  display: none;
+}
+@media only screen and (max-width: 1023px) {
+  .dropdown {
+    display: block;
+    margin-bottom: 32px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .dropdown {
+    margin-bottom: 24px;
+  }
+}
+
+:global(.dark-mode) .dropdownHead {
+  background: #272B30;
+  box-shadow: 0 0 0 #272B30 inset;
+}
+
+.item {
+  position: relative;
+}
+@media only screen and (max-width: 1023px) {
+  .item {
+    display: none;
+  }
+  .item.active {
+    display: block;
+  }
+}
+.item:not(:last-child) {
+  margin-bottom: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid #EFEFEF;
+}
+@media only screen and (max-width: 1023px) {
+  .item:not(:last-child) {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border: none;
+  }
+}
+:global(.dark-mode) .item:not(:last-child) {
+  border-color: #272B30;
+}
+
+.anchor {
+  position: absolute;
+  top: -116px;
+  left: 0;
+  right: 0;
+}
+@media only screen and (max-width: 1023px) {
+  .anchor {
+    top: -106px;
+  }
+}

@@ -1,0 +1,256 @@
+.label {
+    margin-bottom: 14px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.7142857143;
+    color: #33383F;
+}
+
+.header {
+    position: sticky;
+    top: 96px;
+    background-color: rgba(255,255,255,1);
+    font-weight: 700;
+    line-height: 1.3333333333;
+    z-index: 5;
+}
+
+:global(.dark-mode) .label {
+    color: #EFEFEF;
+}
+
+.tooltip {
+    position: relative;
+}
+
+.tooltip svg {
+    fill: #9A9FA5;
+}
+
+.inner {
+    margin: 0 -12px;
+}
+
+@media only screen and (max-width: 767px) {
+    .inner {
+        margin: 0;
+    }
+}
+
+.table {
+    display: table;
+    width: 100%;
+}
+
+@media only screen and (max-width: 767px) {
+    .table {
+        display: block;
+    }
+}
+
+.row {
+    display: table-row;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+@media only screen and (max-width: 767px) {
+    .row {
+        display: block;
+        margin-bottom: 16px;
+        padding-bottom: 16px;
+        border-bottom: 1px solid #EFEFEF;
+    }
+
+    :global(.dark-mode) .row {
+        border-color: #272B30;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .row:first-child {
+        display: none;
+    }
+}
+
+.row:first-child .col {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.3333333333;
+    background-color: rgba(255,255,255,1);
+}
+
+.sort {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+@media only screen and (min-width: 768px) {
+    .row:not(:first-child):hover {
+        background: #F4F4F4;
+    }
+
+    :global(.dark-mode) .row:not(:first-child):hover {
+        background: #272B30;
+    }
+}
+
+.col {
+    position: relative;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 12px;
+    max-width: 150px;
+    font-size: 14px;
+    color: #1A1D1F;
+}
+
+@media only screen and (max-width: 767px) {
+    .col {
+        display: block;
+        padding: 0;
+    }
+}
+
+:global(.dark-mode) .col {
+    color: #FCFCFC;
+}
+
+.col:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 1px;
+    background: #EFEFEF;
+}
+
+@media only screen and (max-width: 767px) {
+    .col:after {
+        display: none;
+    }
+}
+
+:global(.dark-mode) .col:after {
+    background: #272B30;
+}
+
+.col:first-child {
+    border-radius: 8px 0 0 8px;
+}
+
+.col:first-child:after {
+    left: 12px;
+}
+
+@media only screen and (max-width: 767px) {
+    .col:not(:first-child) {
+        display: none;
+    }
+}
+
+.col:last-child {
+    border-radius: 0 8px 8px 0;
+}
+
+.col:last-child:after {
+    right: 12px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.item .price {
+    display: none;
+}
+
+@media only screen and (max-width: 767px) {
+    .item .price {
+        display: inline-block;
+        margin-top: 8px;
+    }
+}
+
+.preview {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    margin-right: 16px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 767px) {
+    .preview {
+        width: 104px;
+        height: 112px;
+        margin-right: 20px;
+    }
+}
+
+.preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product {
+    max-width: 200px;
+    margin-bottom: 4px;
+}
+
+@media only screen and (max-width: 767px) {
+    .product {
+        max-width: 100%;
+    }
+}
+
+.link {
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.2307692308;
+    color: #6F767E;
+}
+
+.price {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 6px;
+    background: #B5E4CA;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.7142857143;
+}
+
+:global(.dark-mode) .price {
+    color: #1A1D1F;
+}
+
+.date {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.7142857143;
+    color: #6F767E;
+}
+
+.foot {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.foot .button .loader {
+    transform: scale(0.8);
+    margin: 0 18px 0 8px;
+}
+
+.deal {
+    display: flex;
+    gap: 10px;
+}

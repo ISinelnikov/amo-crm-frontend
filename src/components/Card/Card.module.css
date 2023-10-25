@@ -1,0 +1,35 @@
+.card {
+  position: relative;
+  padding: 24px;
+  background: #FCFCFC;
+  border-radius: 8px;
+}
+@media only screen and (max-width: 767px) {
+  .card {
+    padding: 16px;
+  }
+}
+:global(.dark-mode) .card {
+  background: #1A1D1F;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  min-height: 40px;
+  margin-bottom: 32px;
+}
+@media only screen and (max-width: 767px) {
+  .head {
+    margin-bottom: 24px;
+  }
+}
+
+.title {
+  margin-right: auto;
+}
+@media only screen and (max-width: 767px) {
+  .title {
+    line-height: 40px;
+  }
+}

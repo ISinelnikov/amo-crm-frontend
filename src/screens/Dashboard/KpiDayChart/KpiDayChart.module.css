@@ -1,0 +1,40 @@
+.chart {
+    width: auto;
+    height: 320px;
+    margin-left: -35px;
+    margin-bottom: -10px;
+}
+
+@media only screen and (max-width: 767px) {
+    .legend {
+        display: none;
+    }
+}
+
+.legend {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.indicator {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 10px;
+    line-height: 1.3333333333;
+}
+
+.color {
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    border-radius: 4px;
+}
+
+.note {
+
+}

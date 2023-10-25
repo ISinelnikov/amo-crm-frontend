@@ -1,0 +1,89 @@
+.header {
+    margin-top: -20px;
+    margin-bottom: 20px;
+}
+
+.chart {
+    width: auto;
+    height: 360px;
+}
+
+.chartTitle {
+    display: flex;
+    flex-direction: column;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.6;
+    letter-spacing: -0.02em;
+    margin: 5px 5px 5px -10px;
+}
+
+.noteTitle {
+    text-align: center;
+}
+
+.note {
+    font-size: 16px;
+}
+
+@media only screen and (max-width: 1339px) {
+    .chart {
+        margin-left: -12px;
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+    .chart {
+        max-width: 310px;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .chart {
+        padding-left: 10px;
+    }
+}
+
+.legend {
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 26px;
+}
+
+.indicator {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 10px;
+    line-height: 1.3333333333;
+}
+
+.color {
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    border-radius: 4px;
+}
+
+.title {
+    font-size: 12px;
+    line-height: 1.3333333333;
+    font-weight: 500;
+    color: #6F767E;
+}
+
+.percent {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.6;
+    letter-spacing: -0.02em;
+}
+
+@media only screen and (max-width: 767px) {
+    .percent {
+        font-size: 18px;
+    }
+}

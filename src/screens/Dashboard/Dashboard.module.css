@@ -1,0 +1,65 @@
+.row {
+    display: flex;
+}
+
+@media only screen and (max-width: 1023px) {
+    .row {
+        display: block;
+    }
+}
+
+.col:first-child {
+    flex: 0 0 calc(100% - 340px);
+    width: calc(100% - 340px);
+    padding-right: 8px;
+}
+
+@media only screen and (max-width: 1419px) {
+    .col:first-child {
+        flex: 0 0 calc(100% - 310px);
+        width: calc(100% - 310px);
+    }
+}
+
+@media only screen and (max-width: 1259px) {
+    .col:first-child {
+        flex: 0 0 calc(100% - 296px);
+        width: calc(100% - 296px);
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+    .col:first-child {
+        width: 100%;
+        margin-bottom: 8px;
+        padding-right: 0;
+    }
+}
+
+.col:nth-child(2) {
+    flex-shrink: 0;
+    width: 340px;
+}
+
+@media only screen and (max-width: 1419px) {
+    .col:nth-child(2) {
+        width: 310px;
+    }
+}
+
+@media only screen and (max-width: 1259px) {
+    .col:nth-child(2) {
+        width: 296px;
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+    .col:nth-child(2) {
+        width: 100%;
+    }
+}
+
+.row:not(:last-child),
+.card:not(:last-child) {
+    margin-bottom: 8px;
+}

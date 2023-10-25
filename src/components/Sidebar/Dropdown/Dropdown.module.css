@@ -1,0 +1,298 @@
+.dropdown.active .head svg:last-child {
+  transform: rotate(180deg);
+}
+.dropdown.active .body {
+  display: block;
+}
+@media only screen and (max-width: 1259px) {
+  .dropdown.active .body {
+    display: none;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .dropdown.active .body {
+    display: block;
+  }
+}
+@media only screen and (max-width: 1259px) {
+  .dropdown.wide .head {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 1259px) and (max-width: 1259px) {
+  .dropdown.wide .head svg:first-child {
+    margin-right: 12px;
+  }
+}
+@media only screen and (max-width: 1259px) and (max-width: 1259px) {
+  .dropdown.wide .head svg:last-child {
+    display: inline-block;
+  }
+}
+@media only screen and (max-width: 1259px) {
+  .dropdown.wide .add {
+    display: flex;
+  }
+}
+@media only screen and (max-width: 1259px) {
+  .dropdown.wide.active .body {
+    display: block;
+  }
+}
+
+.top {
+  position: relative;
+}
+.top.active .head {
+  background: #EFEFEF;
+  box-shadow: inset 0px -2px 1px rgba(0, 0, 0, 0.05), inset 0px 1px 1px #FFFFFF;
+  color: #1A1D1F;
+}
+:global(.dark-mode) .top.active .head {
+  background: #272B30;
+  box-shadow: inset 0px -2px 1px rgba(0, 0, 0, 0.4), inset 0px 1px 1px rgba(255, 255, 255, 0.11);
+  color: #FCFCFC;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 48px;
+  padding: 0 12px;
+  border-radius: 12px;
+  white-space: nowrap;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.6;
+  color: #6F767E;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  transition: background 0.2s, box-shadow 0.2s, color 0.2s;
+}
+@media only screen and (max-width: 1259px) {
+  .head {
+    font-size: 0;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .head {
+    font-size: 15px;
+  }
+}
+.head:hover {
+  color: #1A1D1F;
+}
+.head:hover svg {
+  fill: #1A1D1F;
+}
+:global(.dark-mode) .head:hover {
+  color: #FCFCFC;
+}
+:global(.dark-mode) .head:hover svg {
+  fill: #FCFCFC;
+}
+
+@media only screen and (max-width: 1259px) {
+  .head.active:not(.wide) {
+    background: #EFEFEF;
+    box-shadow: inset 0px -2px 1px rgba(0, 0, 0, 0.05), inset 0px 1px 1px #FFFFFF;
+    color: #1A1D1F;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .head.active:not(.wide) {
+    background: none;
+    box-shadow: none;
+    color: #6F767E;
+  }
+}
+@media only screen and (max-width: 1259px) {
+  :global(.dark-mode) .head.active:not(.wide) {
+    background: #272B30;
+    box-shadow: inset 0px -2px 1px rgba(0, 0, 0, 0.4), inset 0px 1px 1px rgba(255, 255, 255, 0.11);
+    color: #FCFCFC;
+  }
+  :global(.dark-mode) .head.active:not(.wide) svg {
+    fill: #FCFCFC;
+  }
+}
+@media only screen and (max-width: 767px) {
+  :global(.dark-mode) .head.active:not(.wide) {
+    background: none;
+    box-shadow: none;
+    color: #6F767E;
+  }
+  :global(.dark-mode) .head.active:not(.wide) svg {
+    fill: #6F767E;
+  }
+}
+
+.head svg {
+  flex-shrink: 0;
+  fill: #6F767E;
+  transition: transform 0.2s, fill 0.2s;
+}
+.head svg:first-child {
+  margin-right: 12px;
+}
+@media only screen and (max-width: 1259px) {
+  .head svg:first-child {
+    margin-right: 0;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .head svg:first-child {
+    margin-right: 12px;
+  }
+}
+.head svg:last-child {
+  margin-left: auto;
+}
+@media only screen and (max-width: 1259px) {
+  .head svg:last-child {
+    display: none;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .head svg:last-child {
+    display: inline-block;
+  }
+}
+
+.add {
+  position: absolute;
+  top: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 48px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid #EFEFEF;
+  transform: translateY(-50%);
+  font-size: 0;
+  transition: border-color 0.2s;
+}
+@media only screen and (max-width: 1259px) {
+  .add {
+    display: none;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .add {
+    display: flex;
+  }
+}
+:global(.dark-mode) .add {
+  border-color: #33383F;
+}
+
+.add svg {
+  fill: #6F767E;
+  transition: fill 0.2s;
+}
+.add:hover {
+  border-color: #1A1D1F;
+}
+.add:hover svg {
+  fill: #1A1D1F;
+}
+:global(.dark-mode) .add:hover {
+  border-color: #9A9FA5;
+}
+:global(.dark-mode) .add:hover svg {
+  fill: #9A9FA5;
+}
+
+.add.active {
+  border-color: #9A9FA5;
+}
+.add.active svg {
+  fill: #9A9FA5;
+}
+
+.body {
+  position: relative;
+  display: none;
+  padding-left: 36px;
+}
+.body:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 23px;
+  bottom: 32px;
+  width: 2px;
+  border-radius: 2px;
+  background: #EFEFEF;
+}
+:global(.dark-mode) .body:before {
+  background: #272B30;
+}
+
+.link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 48px;
+  padding: 0 12px;
+  border-radius: 12px;
+  color: #6F767E;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  transition: background 0.2s, box-shadow 0.2s, color 0.2s;
+}
+.link:before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: -13px;
+  width: 12px;
+  height: 12px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='none' viewBox='0 0 14 14'%3E%3Cpath d='M1 1v4a8 8 0 0 0 8 8h4' stroke='%23efefef' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat 50% 50%/100% auto;
+}
+:global(.dark-mode) .link:before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='none' viewBox='0 0 14 14'%3E%3Cpath d='M1 1v4a8 8 0 0 0 8 8h4' stroke='%23272B30' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+}
+
+.link svg {
+  margin-left: auto;
+  opacity: 0;
+  fill: #1A1D1F;
+  transition: opacity 0.2s;
+}
+:global(.dark-mode) .link svg {
+  fill: #FCFCFC;
+}
+
+.link:hover {
+  color: #1A1D1F;
+}
+:global(.dark-mode) .link:hover {
+  color: #FCFCFC;
+}
+
+.link.active {
+  background: #EFEFEF;
+  box-shadow: inset 0px -2px 1px rgba(0, 0, 0, 0.05), inset 0px 1px 1px #FFFFFF;
+  color: #1A1D1F;
+}
+:global(.dark-mode) .link.active {
+  background: #272B30;
+  box-shadow: inset 0px -2px 1px rgba(0, 0, 0, 0.4), inset 0px 1px 1px rgba(255, 255, 255, 0.11);
+  color: #FCFCFC;
+}
+
+.link.active svg {
+  opacity: 1;
+}
+
+.counter {
+  flex-shrink: 0;
+  min-width: 24px;
+  margin-left: auto;
+  border-radius: 6px;
+  text-align: center;
+  line-height: 24px;
+  color: #1A1D1F;
+}

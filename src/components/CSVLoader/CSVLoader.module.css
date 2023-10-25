@@ -1,0 +1,16 @@
+.button {
+    display: block;
+    height: 60px;
+    width: 60px;
+    padding: 10px;
+    border-radius: 12px;
+    border: 2px solid #EFEFEF;
+    cursor: pointer;
+    transition: all 0.2s;
+    fill: #6F767E;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}

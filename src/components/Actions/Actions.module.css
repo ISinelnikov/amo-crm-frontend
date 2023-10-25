@@ -1,0 +1,163 @@
+.actions {
+    position: relative;
+    display: inline-block;
+    z-index: 3;
+}
+
+.actions.active {
+    z-index: 10;
+}
+
+.actions.active .head {
+    background: #EFEFEF;
+}
+
+.actions.active .head svg {
+    fill: #1A1D1F;
+}
+
+:global(.dark-mode) .actions.active .head {
+    background: #272B30;
+}
+
+:global(.dark-mode) .actions.active .head svg {
+    fill: #FCFCFC;
+}
+
+.actions.active .body {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.actions.small .head {
+    width: 32px;
+    height: 32px;
+}
+
+.actions.small .head svg {
+    width: 20px;
+    height: 20px;
+}
+
+.actions.small .body {
+    right: -8px;
+}
+
+.actions.small .body:before {
+    right: 14px;
+}
+
+.actions.up .body {
+    top: auto;
+    bottom: calc(100% + 12px);
+    box-shadow: 0px 20px 32px -6px rgba(0, 0, 0, 0.08), 0px 0px 7px -4px rgba(0, 0, 0, 0.05), 0px 16px 24px -4px rgba(0, 0, 0, 0.1);
+}
+
+.actions.up .body:before {
+    top: 100%;
+    bottom: auto;
+    transform: rotate(180deg);
+}
+
+.head {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    user-select: none;
+    transition: background 0.2s;
+}
+
+.head svg {
+    transition: fill 0.2s;
+    fill: #6F767E;
+}
+
+.head:hover svg {
+    fill: #2A85FF;
+}
+
+:global(.dark-mode) .head {
+    background: #111315;
+}
+
+:global(.dark-mode) .head:hover svg {
+    fill: #2A85FF;
+}
+
+.body {
+    position: absolute;
+    top: calc(100% + 12px);
+    right: -12px;
+    width: 264px;
+    padding: 12px;
+    border-radius: 16px;
+    border: 1px solid transparent;
+    box-shadow: 0px 40px 64px -12px rgba(0, 0, 0, 0.08), 0px 0px 14px -4px rgba(0, 0, 0, 0.05), 0px 32px 48px -8px rgba(0, 0, 0, 0.1);
+    background: #FFFFFF;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(3px);
+    transition: all 0.2s;
+}
+
+:global(.dark-mode) .body {
+    background: #111315;
+    border-color: #272B30;
+}
+
+.body:before {
+    content: "";
+    position: absolute;
+    right: 20px;
+    bottom: 100%;
+    width: 20px;
+    height: 10px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='10' fill='none' viewBox='0 0 20 10'%3E%3Cpath d='M6.927 1.687L0 10h20l-6.927-8.313a4 4 0 0 0-6.146 0z' fill='%23fff'/%3E%3C/svg%3E") no-repeat 50% 50%/100% auto;
+}
+
+:global(.dark-mode) .body:before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='10' fill='none' viewBox='0 0 20 10'%3E%3Cpath d='M6.927 1.687L0 10h20l-6.927-8.313a4 4 0 0 0-6.146 0z' fill='%23272B30'/%3E%3C/svg%3E");
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.6;
+    color: #6F767E;
+    transition: all 0.2s;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.option svg {
+    margin-right: 12px;
+    fill: #6F767E;
+    transition: fill 0.2s;
+}
+
+.option:hover, .option.selectioned {
+    background: #EFEFEF;
+    color: #1A1D1F;
+}
+
+.option:hover svg, .option.selectioned svg {
+    fill: #1A1D1F;
+}
+
+:global(.dark-mode) .option:hover, :global(.dark-mode) .option.selectioned {
+    background: transparent;
+    color: #FCFCFC;
+}
+
+:global(.dark-mode) .option:hover svg, :global(.dark-mode) .option.selectioned svg {
+    fill: #FCFCFC;
+}

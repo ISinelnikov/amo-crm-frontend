@@ -1,0 +1,146 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 340px;
+  right: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  padding: 24px 40px;
+  background: #FCFCFC;
+  box-shadow: inset 1px 0px 0px #F4F4F4, inset 0 -1px 0px #EFEFEF;
+}
+@media only screen and (max-width: 1339px) {
+  .header {
+    left: 300px;
+    padding: 16px 24px;
+  }
+}
+@media only screen and (max-width: 1259px) {
+  .header {
+    left: 96px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .header {
+    left: 0;
+    padding: 16px 24px 16px 16px;
+  }
+}
+:global(.dark-mode) .header {
+  background: #1A1D1F;
+  box-shadow: inset 1px 0px 0px #111315, inset 0 -1px 0px #111315;
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  margin-right: auto;
+}
+@media only screen and (max-width: 767px) {
+  .burger {
+    display: flex;
+  }
+}
+.burger:before, .burger:after {
+  content: "";
+  width: 16px;
+  height: 2px;
+  border-radius: 2px;
+  background: #6F767E;
+}
+.burger:before {
+  margin-bottom: 6px;
+}
+
+.control {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+@media only screen and (max-width: 767px) {
+  .control {
+    margin-left: 0;
+  }
+}
+
+.control .button:not(:last-child),
+.control > div:not(:last-child),
+.buttonSearch:not(:last-child) {
+  margin-right: 24px;
+}
+
+.buttonSearch {
+  display: none;
+  width: 48px;
+  height: 48px;
+}
+@media only screen and (max-width: 767px) {
+  .buttonSearch {
+    display: inline-block;
+  }
+}
+.buttonSearch svg {
+  fill: #6F767E;
+  transition: fill 0.2s;
+}
+.buttonSearch.active svg {
+  fill: #1A1D1F;
+}
+:global(.dark-mode) .buttonSearch.active svg {
+  fill: #FCFCFC;
+}
+
+@media only screen and (max-width: 1023px) {
+  .control .button {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .search {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.2s;
+  }
+  .search.visible {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.btns {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+@media only screen and (max-width: 767px) {
+  .btns {
+    margin-left: 0;
+  }
+}
+
+.link {
+  margin-right: 32px;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.6;
+  color: #1A1D1F;
+  transition: color 0.2s;
+}
+@media only screen and (max-width: 767px) {
+  .link {
+    margin-right: 24px;
+  }
+}
+:global(.dark-mode) .link {
+  color: #FCFCFC;
+}
+
+.link:hover {
+  color: #2A85FF;
+}

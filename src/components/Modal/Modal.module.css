@@ -1,0 +1,78 @@
+.modal {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 48px;
+  background: rgba(244, 244, 244, 0.8);
+  opacity: 0;
+  animation: showModal 0.4s forwards;
+  overflow: auto;
+  z-index: 999;
+}
+@media only screen and (max-width: 767px) {
+  .modal {
+    padding: 16px;
+  }
+}
+:global(.dark-mode) .modal {
+  background: rgba(39, 43, 48, 0.9);
+}
+
+@keyframes showModal {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.outer {
+  position: relative;
+  width: 100%;
+  max-width: 408px;
+  margin: auto;
+  background: #FCFCFC;
+  border-radius: 16px;
+  box-shadow: 0px 0px 14px -4px rgba(0, 0, 0, 0.05), 0px 32px 48px -8px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+:global(.dark-mode) .outer {
+  background: #1A1D1F;
+}
+
+@media only screen and (max-width: 767px) {
+  .outer {
+    box-shadow: none;
+  }
+}
+.outer > div {
+  padding: 26px 24px 24px;
+}
+
+.close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #EFEFEF;
+  font-size: 0;
+}
+.close svg {
+  fill: #33383F;
+  transition: transform 0.2s;
+}
+:global(.dark-mode) .close {
+  background: #272B30;
+}
+:global(.dark-mode) .close svg {
+  fill: #FCFCFC;
+}
+
+.close:hover svg {
+  transform: rotate(90deg);
+}

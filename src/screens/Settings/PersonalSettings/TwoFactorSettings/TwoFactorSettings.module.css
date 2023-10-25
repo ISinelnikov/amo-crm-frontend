@@ -1,0 +1,64 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.line {
+    display: flex;
+    padding-bottom: 16px;
+}
+
+.line:not(:last-child) {
+    margin-bottom: 32px;
+    border-bottom: 1px solid #EFEFEF;
+}
+
+@media only screen and (max-width: 1023px) {
+    .line:not(:last-child) {
+        margin-bottom: 24px;
+    }
+}
+
+:global(.dark-mode) .line:not(:last-child) {
+    border-color: #272B30;
+}
+
+.title {
+    margin-right: 24px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.7142857143;
+    color: #33383F;
+}
+
+:global(.dark-mode) .title {
+    color: #EFEFEF;
+}
+
+.content {
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.7142857143;
+    color: #33383F;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+:global(.dark-mode) .content {
+    color: #EFEFEF;
+}
+
+.tooltip {
+    position: relative;
+    top: -1px;
+}
+
+.tooltip svg {
+    fill: #9A9FA5;
+}
+
+.switch {
+    margin-left: auto;
+}

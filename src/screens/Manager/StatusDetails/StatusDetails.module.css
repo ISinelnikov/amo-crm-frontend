@@ -1,0 +1,160 @@
+.details {
+    position: relative;
+    flex-grow: 1;
+    padding: 60px 0 0 48px;
+}
+
+.filter {
+    display: flex;
+    gap: 10px;
+}
+
+.dropdown {
+    width: 150px;
+}
+
+@media only screen and (max-width: 1419px) {
+    .details {
+        padding: 48px 0 0 48px;
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+    .details {
+        padding: 0;
+    }
+}
+
+.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #EFEFEF;
+}
+
+@media only screen and (max-width: 1023px) {
+    .close {
+        top: -90px;
+        background: #FCFCFC;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .close {
+        top: -70px;
+    }
+}
+
+.close svg {
+    transition: transform 0.2s;
+}
+
+:global(.dark-mode) .close {
+    background: #272B30;
+}
+
+:global(.dark-mode) .close svg {
+    fill: #FCFCFC;
+}
+
+.close:hover svg {
+    transform: rotate(90deg);
+}
+
+.head,
+.editor {
+    margin-bottom: 48px;
+}
+
+@media only screen and (max-width: 1339px) {
+    .head,
+    .editor {
+        margin-bottom: 32px;
+    }
+}
+
+.line {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.7142857143;
+    color: #1A1D1F;
+    transition: color 0.2s;
+}
+
+.line svg {
+    margin-right: 12px;
+    fill: #6F767E;
+    transition: fill 0.2s;
+}
+
+:global(.dark-mode) .line {
+    color: #FCFCFC;
+}
+
+.line:hover {
+    color: #2A85FF;
+}
+
+.line:hover svg {
+    fill: #2A85FF;
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    border-width: 1px 0;
+    border-style: solid;
+    border-color: #EFEFEF;
+}
+
+@media only screen and (max-width: 767px) {
+    .socials {
+        padding: 16px 0;
+    }
+}
+
+:global(.dark-mode) .socials {
+    border-color: #272B30;
+}
+
+.social svg {
+    fill: #6F767E;
+    transition: fill 0.2s;
+}
+
+.social:hover svg {
+    fill: #2A85FF;
+}
+
+.social:not(:last-child) {
+    margin-right: 32px;
+}
+
+.line:not(:last-child),
+.socials:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 767px) {
+    .line:not(:last-child),
+    .socials:not(:last-child) {
+        margin-bottom: 16px;
+    }
+}
+
+.history {
+    margin-top: 48px;
+}
+
+@media only screen and (max-width: 1339px) {
+    .history {
+        margin-top: 32px;
+    }
+}

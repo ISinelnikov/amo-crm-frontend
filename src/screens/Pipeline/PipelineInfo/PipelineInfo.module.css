@@ -1,0 +1,10 @@
+.chart {
+  width: auto;
+  margin-left: -10px;
+  margin-bottom: -10px;
+}
+
+.filter {
+  display: flex;
+  gap: 10px;
+}

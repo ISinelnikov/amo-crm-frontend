@@ -1,0 +1,342 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    width: 340px;
+    padding: 24px;
+    background: #FCFCFC;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.sidebar::-webkit-scrollbar {
+    display: none;
+}
+
+@media only screen and (max-width: 1339px) {
+    .sidebar {
+        width: 300px;
+        padding: 16px;
+    }
+}
+
+@media only screen and (max-width: 1259px) {
+    .sidebar {
+        z-index: 14;
+        width: 96px;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .sidebar {
+        width: 100%;
+        align-items: stretch;
+    }
+}
+
+:global(.dark-mode) .sidebar {
+    background: #1A1D1F;
+}
+
+@media only screen and (max-width: 1259px) {
+    .sidebar.active {
+        align-items: stretch;
+        width: 300px;
+        box-shadow: 4px 0 32px rgba(17, 19, 21, 0.05);
+    }
+
+    .sidebar.active .item,
+    .sidebar.active .link {
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .sidebar.active .item svg,
+    .sidebar.active .link svg {
+        margin-right: 12px;
+    }
+
+    .sidebar.active .counter {
+        display: block;
+    }
+
+    .sidebar.active .toggle {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+    }
+
+    .sidebar.active .toggle svg {
+        fill: #1A1D1F;
+    }
+
+    .sidebar.active .toggle svg:first-child {
+        display: none;
+    }
+
+    .sidebar.active .toggle svg:nth-child(2) {
+        display: inline-block;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .sidebar.active {
+        width: 100%;
+    }
+}
+
+.logo {
+    display: block;
+    max-width: 48px;
+    margin-bottom: 28px;
+}
+
+@media only screen and (max-width: 1339px) {
+    .logo {
+        margin-bottom: 24px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .logo {
+        margin-left: auto;
+    }
+}
+
+.logo img {
+    width: 100%;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: auto;
+}
+
+.item,
+.dropdown {
+    margin-bottom: 8px;
+}
+
+.item,
+.link {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 48px;
+    padding: 0 12px;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    white-space: nowrap;
+    color: #6F767E;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    transition: background 0.2s, box-shadow 0.2s, color 0.2s;
+}
+
+@media only screen and (max-width: 1259px) {
+    .item,
+    .link {
+        width: 48px;
+        font-size: 0;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .item,
+    .link {
+        width: 100%;
+        font-size: 15px;
+    }
+}
+
+.item svg,
+.link svg {
+    margin-right: 12px;
+    fill: #6F767E;
+    transition: fill 0.2s;
+}
+
+@media only screen and (max-width: 1259px) {
+    .item svg,
+    .link svg {
+        margin-right: 0;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .item svg,
+    .link svg {
+        margin-right: 12px;
+    }
+}
+
+.item:hover, .item.active,
+.link:hover,
+.link.active {
+    color: #1A1D1F;
+}
+
+.item:hover svg, .item.active svg,
+.link:hover svg,
+.link.active svg {
+    fill: #1A1D1F;
+}
+
+:global(.dark-mode) .item:hover, :global(.dark-mode) .item.active,
+:global(.dark-mode) .link:hover,
+:global(.dark-mode) .link.active {
+    color: #FCFCFC;
+}
+
+:global(.dark-mode) .item:hover svg, :global(.dark-mode) .item.active svg,
+:global(.dark-mode) .link:hover svg,
+:global(.dark-mode) .link.active svg {
+    fill: #FCFCFC;
+}
+
+.item.active,
+.link.active {
+    background: #EFEFEF;
+    box-shadow: inset 0px -2px 1px rgba(0, 0, 0, 0.05), inset 0px 1px 1px #FFFFFF;
+}
+
+:global(.dark-mode) .item.active,
+:global(.dark-mode) .link.active {
+    background: #272B30;
+    box-shadow: inset 0px -2px 1px rgba(0, 0, 0, 0.4), inset 0px 1px 1px rgba(255, 255, 255, 0.11);
+}
+
+.toggle {
+    display: none;
+    width: 48px;
+    height: 48px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+@media only screen and (max-width: 1259px) {
+    .toggle {
+        display: inline-block;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .toggle {
+        display: none;
+    }
+}
+
+.toggle svg {
+    fill: #6F767E;
+}
+
+.toggle svg:nth-child(2) {
+    display: none;
+}
+
+.close {
+    display: none;
+}
+
+.header {
+    display: flex;
+}
+
+@media only screen and (max-width: 767px) {
+    .close {
+        display: block;
+        position: absolute;
+        top: 16px;
+        left: 16px;
+        width: 48px;
+        height: 48px;
+    }
+
+    .close svg {
+        fill: #1A1D1F;
+    }
+
+    :global(.dark-mode) .close svg {
+        fill: #FCFCFC;
+    }
+}
+
+.foot {
+    margin-top: 24px;
+    padding-top: 18px;
+    border-top: 2px solid #F4F4F4;
+}
+
+@media only screen and (max-width: 1259px) {
+    .foot {
+        margin-top: 12px;
+        padding-top: 12px;
+    }
+}
+
+:global(.dark-mode) .foot {
+    border-color: #272B30;
+}
+
+.theme {
+    margin-top: 16px;
+}
+
+.counter {
+    flex-shrink: 0;
+    min-width: 24px;
+    margin-left: auto;
+    border-radius: 6px;
+    background: #CABDFF;
+    text-align: center;
+    line-height: 24px;
+    color: #1A1D1F;
+}
+
+@media only screen and (max-width: 1259px) {
+    .counter {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .counter {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 1259px) {
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 12;
+        background: rgba(244, 244, 244, 0.8);
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.2s;
+    }
+
+    :global(.dark-mode) .overlay {
+        background: rgba(39, 43, 48, 0.9);
+    }
+
+    .overlay.active {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .overlay {
+        display: none;
+    }
+}

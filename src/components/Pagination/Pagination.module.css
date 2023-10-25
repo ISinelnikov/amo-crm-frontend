@@ -1,0 +1,35 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    height: 60px;
+    border-bottom: 1px solid #EFEFEF;
+    border-top: 1px solid #EFEFEF;
+    gap: 40px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    padding: 10px;
+    border-radius: 12px;
+    border: 2px solid #EFEFEF;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.current {
+    border: 2px solid #CABDFF;
+}
+
+.item svg {
+    fill: #1A1D1F;
+}

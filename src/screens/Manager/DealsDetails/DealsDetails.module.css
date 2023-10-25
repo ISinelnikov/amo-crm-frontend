@@ -1,0 +1,145 @@
+.head {
+    margin-bottom: 44px;
+}
+@media only screen and (max-width: 1023px) {
+    .head {
+        margin-bottom: 32px;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .head {
+        flex-wrap: wrap;
+        margin-bottom: 24px;
+    }
+}
+.head .form {
+    margin-right: auto;
+}
+@media only screen and (max-width: 1023px) {
+    .head .form {
+        width: 250px;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .head .form {
+        width: 100%;
+        margin: 0 0 16px;
+    }
+}
+@media only screen and (max-width: 1023px) {
+    .head.hidden {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .title {
+        margin: 0 0 16px;
+    }
+}
+
+.nav {
+    display: flex;
+}
+@media only screen and (max-width: 767px) {
+    .nav {
+        width: 100%;
+    }
+}
+
+.link {
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.6;
+    color: #6F767E;
+    transition: all 0.2s;
+}
+@media only screen and (max-width: 767px) {
+    .link {
+        flex: 1;
+    }
+}
+.link:hover, .link.active {
+    color: #1A1D1F;
+}
+:global(.dark-mode) .link:hover, :global(.dark-mode) .link.active {
+    color: #FCFCFC;
+}
+
+.link.active {
+    background: #EFEFEF;
+}
+:global(.dark-mode) .link.active {
+    background: #272B30;
+}
+
+.link:not(:last-child) {
+    margin-right: 8px;
+}
+@media only screen and (max-width: 767px) {
+    .link:not(:last-child) {
+        margin-right: 0;
+    }
+}
+
+.filters {
+    margin-left: 8px;
+}
+@media only screen and (max-width: 1023px) {
+    .filters {
+        display: none;
+    }
+}
+
+.details {
+    display: none;
+}
+
+.row.flex {
+    display: flex;
+}
+.row.flex .table {
+    flex-shrink: 0;
+    width: 384px;
+}
+@media only screen and (max-width: 1419px) {
+    .row.flex .table {
+        width: 350px;
+    }
+}
+@media only screen and (max-width: 1259px) {
+    .row.flex .table {
+        width: 320px;
+    }
+}
+@media only screen and (max-width: 1023px) {
+    .row.flex .table {
+        display: none;
+    }
+}
+.row.flex .details {
+    display: block;
+}
+
+.card {
+    margin-bottom: 8px;
+}
+
+.button {
+    display: block;
+    height: 60px;
+    width: 60px;
+    padding: 10px;
+    border-radius: 12px;
+    border: 2px solid #EFEFEF;
+    cursor: pointer;
+    transition: all 0.2s;
+    fill: #6F767E;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
